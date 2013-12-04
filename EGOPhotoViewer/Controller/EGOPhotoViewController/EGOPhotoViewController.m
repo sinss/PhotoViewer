@@ -91,6 +91,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
+    /*
+     add new feature for ios7
+     */
+    if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)])
+    {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+    
 	self.view.backgroundColor = [UIColor blackColor];
 	self.wantsFullScreenLayout = YES;
 	
